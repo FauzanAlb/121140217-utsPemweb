@@ -1,0 +1,118 @@
+/* Style untuk halaman utama, formulir, dan tabel */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    position: fixed;
+    width: 96%;
+    margin-bottom: 30px;
+    display: block;
+    padding: 30px;
+    background: #04364A;
+    white-space: nowrap;
+  }
+
+.header h1 {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  line-height: 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header h3{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    line-height: 0;
+    text-align: center;
+}
+
+/*bagian side bar*/
+
+
+.sidebar {
+    position: fixed;
+    left: 0px;
+    width: 15%;
+    margin-top: 190px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    height: 72%;
+    background: #74bdcb;
+}
+
+.sidebar .top {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    line-height: 70px;
+}
+
+.sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 0;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(6, 255, 251, 0.1);
+    border-bottom: 1px solid rgba(125, 134, 146, 0.302);
+}
+
+ul li:hover a {  
+    padding-left: 100px;
+    background: #04364A;
+    color: rgb(255, 255, 255);
+}
+
+ul li {
+    list-style-type: none;
+}
+
+
+/*END*/
+
+
+
+main {
+    flex: 1;
+    margin-left: 15%;
+    float: right;
+    padding: 20px;
+    margin-top: 200px;
+    margin-bottom: 70px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.p{
+    text-align: center;
+}
+p{
+    max-width: 1200px;
+    text-align: justify;
+    margin: auto;
+}
+
+
+footer {
+    position: sticky;
+    width: 100%;
+    margin-top: 0;
+    background-color:#176B87;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+}
+
+footer p{
+    text-align: center;
+}

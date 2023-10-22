@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Halaman Tabel</title>
+    <link rel="stylesheet" type="text/css" href="styletabel.css">
+</head>
+<body onload="addDataToTable">
+    <div class="container">
+        <div class="header">
+            <img src="https://www.itera.ac.id/wp-content/uploads/2019/02/logo_itera_bulet_head.png" width="130" height="130" align="left">
+            <br><br>
+            <h1>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+                Website sederhana UTS pemrograman web</h1>
+            <h3>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                HALAMAN UTAMA</h3>
+        </div>
+        <div class="sidebar">>  
+            <ul>
+                <li><a href="form.html">Halaman Formulir</a></li>
+                <li><a href="tabel.html">Halaman Tabel</a></li>
+                <li><a href="index.html">Halaman Utama</a></li>
+            </ul>
+        </div>
+        <main>
+            <h2 style="text-align: center;">Daftar Mahasiswa</h2>
+            <table>
+                <tr>
+                    <th>Nama</th>
+                    <th>NIM</th>
+                    <th>Program Studi</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Alamat</th>
+                </tr>
+                <tr>
+                    <td>Anggi permana</td>
+                    <td>12345</td>
+                    <td>Teknik Informatika</td>
+                    <td>anggi.12345@student.itera.ac.id</td>
+                    <td>********</td>
+                    <td>Laki-Laki</td>
+                    <td>2003-01-15</td>
+                    <td>Jl. Kesepuhan No.56</td>
+                </tr>
+                <tr>
+                    <td>Aprilia</td>
+                    <td>12346</td>
+                    <td>Teknik Informatika</td>
+                    <td>aprilia.12346@student.itera.ac.id</td>
+                    <td>********</td>
+                    <td>Perempuan</td>
+                    <td>2003-04-25</td>
+                    <td>Gg manis, jati agung</td>
+                </tr>
+                <tr>
+                    <td>Tiora anggita kusuma</td>
+                    <td>12347</td>
+                    <td>Teknik Informatika</td>
+                    <td>tiora.12347@student.itera.ac.id</td>
+                    <td>*********</td>
+                    <td>perempuan</td>
+                    <td>2003-09-03</td>
+                    <td>Jl. abadi wijaya. blok C</td>
+                </tr>
+                <tr>
+                    <td>rahman frimawan</td>
+                    <td>12348</td>
+                    <td>Teknik Informatika</td>
+                    <td>tiora.12348@student.itera.ac.id</td>
+                    <td>******</td>
+                    <td>Laki-Laki</td>
+                    <td>2002-05-29</td>
+                    <td>Jl. priwangi, no 35, blok M</td>
+                </tr>
+                <tr>
+                    <td>Rosiana dewi</td>
+                    <td>12349</td>
+                    <td>Teknik Informatika</td>
+                    <td>Rosiana.12349@student.itera.ac.id</td>
+                    <td>******</td>
+                    <td>perempuan</td>
+                    <td>2003-01-05</td>
+                    <td>Gg singosari, pagar orange</td>
+                </tr>
+            </table> 
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const table = document.querySelector("table");
+                    
+                    // Ambil query string dari URL
+                    const queryString = window.location.search;
+            
+                    if (queryString) {
+                        // Hapus tanda tanya dari query string
+                        const params = new URLSearchParams(queryString);
+                        
+                        // Ambil nilai dari query string
+                        const nama = params.get("nama");
+                        const nim = params.get("nim");
+                        const prodi = params.get("prodi");
+                        const email = params.get("email");
+                        const password = params.get("password");
+                        const passwordStar = '*'.repeat(password.length);
+                        const jenis_kelamin = params.get("jenis_kelamin");
+                        const tgl_lahir = params.get("tgl_lahir");
+                        const alamat = params.get("alamat");
+            
+                        // Buat baris baru di tabel dan isi dengan data
+                        const newRow = table.insertRow(table.rows.length);
+                        const cell1 = newRow.insertCell(0);
+                        const cell2 = newRow.insertCell(1);
+                        const cell3 = newRow.insertCell(2);
+                        const cell4 = newRow.insertCell(3);
+                        const cell5 = newRow.insertCell(4);
+                        const cell6 = newRow.insertCell(5);
+                        const cell7 = newRow.insertCell(6);
+                        const cell8 = newRow.insertCell(7);
+
+                        //masukan data ke dalam cell
+                        cell1.innerHTML = nama;
+                        cell2.innerHTML = nim;
+                        cell3.innerHTML = prodi;
+                        cell4.innerHTML = email;
+                        cell5.innerHTML = passwordStar;
+                        cell6.innerText = jenis_kelamin;
+                        cell7.innerHTML = tgl_lahir;
+                        cell8.innerHTML = alamat;
+                    }
+                });
+            </script>
+        </main>
+        <footer>
+            <p>&copy; fauzan alfa abhista (2023)</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
